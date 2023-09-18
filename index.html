@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VIT CAMPUS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: auto;
+        padding: 0%;
+      }
+      body {
+        background-color: rgb(167, 167, 233);
+        color: white;
+        font-family: "Poppins", sans-serif;
+      }
+      nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 90px;
+        background-color: rgb(3, 3, 114);
+      }
+      nav ul {
+        display: flex;
+        justify-content: center;
+      }
+      nav ul li {
+        list-style: none;
+        margin: 0 19px;
+      }
+      nav ul li a {
+        text-decoration: none;
+        color: white;
+      }
+      nav ul li a:hover {
+        color: black;
+        font-size: 1.1rem;
+      }
+      main hr {
+        border: 0;
+        background: green;
+        height: 1.2px;
+        margin: 40px 80px;
+      }
+      .left {
+        font-size: 2rem;
+      }
+      .firstsection {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 80px 0;
+      }
+      .firstsection > div {
+        width: 30%;
+      }
+      .leftsection {
+        font-size: 2rem;
+      }
+      .leftsection .btn {
+        padding: 12px;
+        background-color: rgb(59, 25, 59);
+        color: white;
+        border: 2px solid white;
+        border-radius: 2px;
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+      .btn:hover {
+        transform: translateY(-10px);
+        background-color: blue;
+        zoom: 110%;
+      }
+      .rightsection img {
+        width: 100%;
+       
+      }
+      .red {
+        color: red;
+      }
+      #element {
+        color: red;
+      }
+      .secondsection {
+        max-width: 80vw;
+        margin: auto;
+        height: 80vh;
+      }
+      .secondsection h1 {
+        font-size: 2rem;
+      }
+      .text-grey {
+        color: black;
+      }
+      .secondsection .box {
+        background: white;
+        width: 80vw;
+        height: 2px;
+        margin: 50px 0;
+        display: flex;
+      }
+      .secondsection .vertical {
+        height: 90px;
+        width: 1px;
+        background-color: rgb(252, 253, 251);
+        margin: 0 7.5vw;
+      }
+      .vertical-title {
+        position: relative;
+        top: 35px;
+        color: black;
+      }
+      .vertical-disc {
+        position: relative;
+        top: 40px;
+        width: 150px;
+        font-size: 12px;
+        color: rgb(15, 15, 15);
+      }
+      .top-image {
+        width: 50px;
+        position: relative;
+        top: -60%;
+        left: -25px;
+      }
+      footer {
+        background-color: black;
+      }
+      .footer {
+        display: flex;
+        padding: 23px 120px;
+        color: aliceblue;
+        justify-content: space-around;
+      }
+      .footer ul {
+        list-style: none;
+      }
+      .footer > div {
+        width: 250px;
+      }
+      footer .footer-text {
+        text-align: center;
+        color: grey;
+        padding: 12px 0;
+      }
+      li a,
+      .dropbtn {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+      }
+
+      li a:hover,
+      .dropdown:hover .dropbtn {
+        background-color: grey;
+      }
+
+      li.dropdown {
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+
+      .dropdown-content a:hover {
+        background-color:rgb(179, 179, 243);
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+        background-color: rgb(10, 10, 158);
+        color: #f9f9f9;
+      }
+      * {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+* {
+    padding: 0px;
+    margin: 0;
+    box-sizing: border-box;
+}
+.slowFade {
+    display: flex;
+    align-items: flex-start;
+    background: #fff;
+    height: 90vh;
+    overflow: hidden;
+    position: relative;
+    
+}
+.slowFade .slide img {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    height: auto;
+    background: #000;
+    background-size: cover;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    opacity: 0;
+    transform: scale(1.5) rotate(15deg);
+    -webkit-animation: slowFade 32s infinite;
+            animation: slowFade 32s infinite;
+}
+.slowFade .slide:nth-child(3) img {
+    -webkit-animation-delay: 8s;
+            animation-delay: 8s;
+}
+.slowFade .slide:nth-child(2) img {
+    -webkit-animation-delay: 16s;
+            animation-delay: 16s;
+}
+.slowFade .slide:nth-child(1) img {
+    -webkit-animation-delay: 24s;
+            animation-delay: 24s;
+}
+@keyframes slowFade {
+    25% {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+    }
+    40% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes slowFade {
+    25% {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+    }
+    40% {
+        opacity: 0;
+    }
+}
+
+#features
+{
+	padding: 5vw 8vw 0 8vw;
+	text-align: center;
+}
+
+#features .fea-base
+{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	grid-gap: 1rem;
+	margin-top: 50px;
+}
+
+#features .fea-box
+{
+	background: #edf1f2;
+	text-align: start;
+	padding: 1.2rem;
+	border-radius: 6px;
+}
+
+#features .fea-box i
+{
+	font-size: 2.3rem;
+	color: rgb(44, 44, 80);
+}
+
+#features .fea-box h3
+{
+	font-size: 1.2rem;
+	font-weight: 600;
+	color: rgb(46, 46, 59);
+	padding: 13px 0 7px 0;
+}
+
+#features .fea-box p
+{
+	font-size: 1rem;
+	font-weight: 400;
+	color: rgb(70, 70, 87);
+}
+
+#registration
+{
+	padding: 6vw 8vw 6vw 8vw;
+	background-image: linear-gradient(rgba(99,112,168,0.5), rgba(81,91,233,0.5)),url("img/signup.jpg");
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#registration .reminder, #registration .reminder h1
+{
+	color: #fff;
+}
+
+#registration .reminder .time
+{
+	display: flex;
+	margin-top: 40px;
+}
+
+#registration .reminder .time .date
+{
+	text-align: center;
+	padding: 13px 33px;
+	background: rgba(255, 255, 255, 0.25);
+	backdrop-filter: blur(4px);
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+	border-radius: 10px;
+	margin: 0 5px 10px 5px;
+	border: 1px solid rgba(255, 255, 255, 0.18);
+	font-size: 1.1rem;
+	font-weight: 600;
+}
+
+#registration .form
+{
+	background: #fff;
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+	padding: 40px;
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+#registration .form input
+{
+	margin: 15px 0;
+	padding: 15px 10px;
+	border: 1px solid rgb(84, 40, 241);
+	outline: none;
+}
+
+#registration .form input::placeholder
+{
+	color: #413c3c;
+	font-weight: 500;
+	font-size: 0.9rem;
+}
+
+#registration .form .btn
+{
+	margin-top: 20px;
+}
+
+#registration .form a.yellow
+{
+	text-decoration: none;
+	font-size: 0.9rem;
+	padding: 13px 35px;
+	background-color: #fff;
+	font-weight: 600;
+	border-radius: 5px;
+	color: #fff;
+	background: #fdc938;
+	transition: 0.3s ease;
+}
+
+#registration .form a.yellow:hover
+{
+	color: rgb(21, 21, 100);
+	background: #fff;
+}
+      @media screen and (max-width: 1000px) {
+        body {
+          background-color: grey;
+          min-width: fit-content;
+        }
+        .box {
+          flex-direction: column;
+        }
+        .secondsection .vertical {
+          height: unset;
+        }
+        .vertical-title,
+        .vertical-disc {
+          left: 45px;
+        }
+
+        .secondsection .box {
+          width: 50vw;
+        }
+        .firstsection {
+          flex-direction: column-reverse;
+        }
+        nav {
+          flex-direction: column;
+        }
+        .top-image {
+          top: 100px;
+        }
+        .leftsection {
+          display: flex;
+          width: 100% !important;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+        .footer {
+          display: flex;
+          height: 10vh;
+        }
+        .rightsection {
+          width: 721px;
+          display: flex;
+          justify-content: center;
+        }
+        .rightsection img {
+          display: flex;
+          width: 45vw;
+          margin-bottom: 72px;
+        }
+        .secondsection {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="left"><img src="logo.png" alt="" style="width: 10%;"> VIT UNIVERSITY</div>
+        <div class="right">
+          <ul>
+            <li class="dropdown">
+              <a href="#home" class="dropbtn">ACADEMICS</a>
+              <div class="dropdown-content">
+                <a href="#">FACULTY</a>
+                <a href="#">ACADEMIC CALENDER</a>
+                <a href="#">CENTER OF EXAMINATION</a>
+                <a href="#">ENGINEERING CLINICS</a>
+                <a href="#">INTERNATIONAL COLLOBORATIONS</a>
+              </div>
+            </li>
+            <li class="dropdown">
+                <a href="#home" class="dropbtn">CAREER</a>
+                <div class="dropdown-content">
+                    <a href="#">JOB OFFERS</a>
+                    <a href="#">COMPANIES</a>
+                    <a href="#">INTERNSHIP</a>
+                  </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#home" class="dropbtn">FACILITIES</a>
+                    <div class="dropdown-content">
+                        <a href="#">INFRASTRUCTURE</a>
+                        <a href="#">HOSTELS</a>
+                        <a href="#">LIBRARY</a>
+                        <a href="#">BANK AND ATMS</a>
+                        <a href="#">TRANSPORT</a>
+                      </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#home" class="dropbtn">CAMPUS</a>
+                        <div class="dropdown-content">
+                            <a href="#">CLUBS & CHAPTERS</a>
+                            <a href="#">CELEBRATIONS</a>
+                            <a href="#">SPORTS</a>
+                            <a href="#">GALLERY</a>
+                            <a href="#">CAMOUS</a>
+                          </div>
+                        </li>
+                        <li class="dropdown">
+                            <a href="javascript:void(0)" class="dropbtn">ADMISSIONS</a>
+                            <div class="dropdown-content">
+                              <a href="#">APPPLICATION PROCESS</a>
+                              <a href="#">M.TECH</a>
+                              <a href="#">B.TECH</a>
+                            </div>
+                          </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+        
+      <section class="firstsection">
+        <div class="leftsection">
+          <div> <span class="red">Vellore Institute of Technology</span></div>
+          <div>educational institutes</div>
+          <div>to delight your feature </div>
+          <div>with more colorful</div>
+          <span id="element"></span>
+          <div class="buttun">
+            <a
+              href="https://www.linkedin.com/in/surya-keerthi-gubbala-/"
+              target="_blank"
+              ><button class="btn">Book your seat......!</button></a
+            >
+          </div>
+        </div>
+        <div class="rightsection">
+          <img src="left.png" alt="" />
+        </div>
+      </section>
+      <hr />
+      <div class="slides slowFade">
+        <div class="slide">
+            <img src="image.png" alt="img"/>
+        </div>
+        <div class="slide">
+            <img src="image2.png" alt="img"/>
+        </div>
+        <div class="slide">
+            <img src="image.png" alt="img"/>
+        </div>
+        <div class="slide">
+            <img src="image4.png" alt="img"/>
+        </div>
+    </div>
+    <section id="features" style="height: 500px;">
+		<h1>Awesome Features</h1>
+		<p>Replenish man have thing gathering lights yielding shall you</p>
+
+		<div class="fea-base">
+			<div class="fea-box">
+				<i class="fa-brands fa-hire-a-helper"></i>
+				<h3>Scholorship Facility</h3>
+				<p>
+					Campus offers scholarships for academic excellence, financial need, and special talents. Apply, get timely support, and give back to the community.
+				</p>
+			</div>
+
+			<div class="fea-box">
+				<i class="fa-solid fa-book-bookmark"></i>
+				<h3>Quality Course</h3>
+				<p>
+					Our campus offers top-notch courses, combining expert faculty, cutting-edge curriculum, and practical learning for a bright future.
+				</p>
+			</div>
+
+			<div class="fea-box">
+				<i class="fas fa-award"></i>
+				<h3>Global Certification</h3>
+				<p>
+					Boost your career with globally recognized certifications offered on campus. Elevate your skills and stand out in the competitive job market.
+				</p>
+			</div>
+		</div>
+	</section>
+    <!-- Registration section starts from here -->
+	<section id="registration">
+		<div class="reminder">
+			<p>Get your seat in prestagious university</p>
+			<h1>Registration To Get It</h1>
+
+			<div class="time">
+				<div class="date">18 <br> Days</div>
+				<div class="date">23 <br> Hours</div>
+				<div class="date">06 <br> Minutes</div>
+				<div class="date">58 <br> Seconds</div>
+			</div>
+		</div>
+
+		<div class="form">
+			<h3>Create Free Account NOW!</h3>
+
+			<input type="text" placeholder="Name" name="" id="">
+			<input type="email" placeholder="Email ID" name="" id="">
+			<input type="text" placeholder="Contact Number" name="" id="">
+
+			<div class="btn">
+				<a href="#" class="yellow">Submit Form</a>
+			</div>
+		</div>
+	</section>
+    </main>
+    <footer>
+      <div class="footer">
+        <div class="footer-first">
+          <h3>vit university</h3>
+        </div>
+        <div class="footer-second">
+          <ul>
+            <li>Home</li>
+            <li>Service</li>
+            <li>About</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+        <div class="footer-third">
+          <ul>
+            <li>Home</li>
+            <li>Service</li>
+            <li>About</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+        <div class="footer-fourth">
+          <ul>
+            <li>Home</li>
+            <li>Service</li>
+            <li>About</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-text">
+        www.vituniversity.com | all rights reserved
+      </div>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+      var typed = new Typed("#element", {
+        strings: ["Welcome to our campus"],
+        typeSpeed: 50,
+      });
+    </script>
+  </body>
+</html>
